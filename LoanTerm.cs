@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Loans.Domain.Applications
 {
-    public class LoanTerm : ValueObject
+    public class LoanTerm
     {
         public int Years { get; }        
 
@@ -24,9 +24,6 @@ namespace Loans.Domain.Applications
 
         public int ToMonths() => Years * 12;
 
-        protected override IEnumerable<object> GetAtomicValues()
-        {
-            yield return Years;
-        }        
+       
     }
 }

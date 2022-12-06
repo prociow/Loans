@@ -1,6 +1,6 @@
 ﻿namespace Loans.Domain.Applications
 {
-    public class LoanProduct : Entity
+    public class LoanProduct
     {
         private string _productName;
         private decimal _interestRate;
@@ -9,7 +9,6 @@
 
         public LoanProduct(int id, string productName, decimal interestRate)
         {
-            Id = id;
             _productName = productName;
             _interestRate = interestRate;
         }

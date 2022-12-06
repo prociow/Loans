@@ -2,7 +2,7 @@
 
 namespace Loans.Domain.Applications
 {
-    public class MonthlyRepaymentComparison : ValueObject
+    public class MonthlyRepaymentComparison
     {
         public string ProductName { get; }
         public decimal InterestRate { get; }
@@ -17,11 +17,5 @@ namespace Loans.Domain.Applications
             MonthlyRepayment = monthlyRepayemt;
         }
 
-        protected override IEnumerable<object> GetAtomicValues()
-        {
-            yield return ProductName;
-            yield return InterestRate;
-            yield return MonthlyRepayment;
-        }
     }
 }

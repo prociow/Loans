@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Loans.Domain.Applications
 {
-    public class LoanAmount : ValueObject
+    public class LoanAmount
     {
         public string CurrencyCode { get; }
         public decimal Principal { get; }
@@ -18,10 +18,6 @@ namespace Loans.Domain.Applications
             Principal = principal;
         }
 
-        protected override IEnumerable<object> GetAtomicValues()
-        {
-            yield return CurrencyCode;
-            yield return Principal;
-        }        
+       
     }
 }
